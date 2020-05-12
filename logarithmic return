@@ -1,0 +1,23 @@
+/*
+
+Logarithmic Rate of Return
+Another type of return is the logarithmic rate of return, also known as the continuously compounded return. This is the expected return for an investment where the earnings are assumed to be continually reinvested over the time period. It is calculated by taking the difference between the log of the ending price and the log of the starting price.
+
+r = log(E) - log(S) = log(\frac{E}{S})r=log(E)−log(S)=log( 
+S
+E
+​	 )
+r: logarithmic rate of return
+S: starting price of investment
+E: ending price of investment
+*/
+
+
+from math import log
+
+def display_as_percentage(val):
+  return '{:.1f}%'.format(val * 100)
+
+# Write code here
+def calculate_log_return(start_price, end_price):
+  return log(end_price / start_price)

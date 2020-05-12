@@ -1,0 +1,29 @@
+
+/*
+
+Simple Rate of Return
+Now that we are familiar with how the rate of return is usually expressed, let’s take a look at calculating it.
+
+The most basic type of return is the simple rate of return. It is defined as the difference between the starting and ending price of an investment over a time period, divided by the starting price. If an investment returns dividends, those dividends should be added to the numerator.
+
+R = \frac{E - S + D}{S}R= 
+S
+E−S+D
+​	 
+R: simple rate of return
+S: starting price of investment
+E: ending price of investment
+D: dividend
+
+*/
+
+def display_as_percentage(val):
+  return '{:.1f}%'.format(val * 100)
+
+# Write code here
+def calculate_simple_return(start_price, end_price, dividend=0):
+  return (end_price - start_price + dividend) / start_price
+
+simple_return = calculate_simple_return(200, 250, 20)
+
+print('The simple rate of return is', display_as_percentage(simple_return))

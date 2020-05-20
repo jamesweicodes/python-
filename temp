@@ -1,0 +1,21 @@
+/*
+Today we’re visiting the Goldilocks Porridge Festival, sampling a selection of breakfast cereals and judging them based on their temperature (listed in Fahrenheit).
+
+Create a logical condition that selects samples in the porridge array that are less than 60, and save them to a variable named cold.
+
+*/
+
+
+import numpy as np
+
+porridge = np.array([79, 65, 50, 63, 56, 90, 85, 98, 79, 51])
+
+cold = porridge[porridge < 60]
+
+hot = porridge[porridge > 80]
+
+just_right = porridge[(porridge > 60) & (porridge < 80)]
+
+print(cold)
+print(hot)
+print(just_right)

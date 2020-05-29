@@ -1,0 +1,32 @@
+/*
+Review
+Now you’ve played around with several two-dimensional line plots in Matplotlib. You’ve seen how you can create simple, readable plots with few commands. You’ve also learned some commands to style and label your plots better. These are the concepts you’ve seen in Matplotlib so far:
+
+Creating a line graph from data
+Changing the appearance of the line
+Zooming in on different parts of the axis
+Putting labels on titles and axes
+Creating a more complex figure layout
+Adding legends to graphs
+Changing tick labels and positions
+Saving what you’ve made
+*/
+
+
+import codecademylib
+from matplotlib import pyplot as plt
+
+x = range(6)
+y1 = [1, 2, 3, 4, 5, 6]
+y2 = [-1, 1, 3, 4, 4, 4]
+
+plt.plot(x, y1, marker='o', color='pink')
+plt.plot(x, y2, marker='o', color='gray')
+
+plt.title("Two Lines on One Graph")
+plt.xlabel("Amazing X-axis")
+plt.ylabel("Incredible Y-axis")
+
+plt.legend(["Y1","Y2"], loc=4)
+
+plt.show()

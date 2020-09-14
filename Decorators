@@ -1,0 +1,94 @@
+Decorators python
+
+
+1.functions are objects
+
+def add_five(num):
+	print(num +5)
+
+print(add_five)
+
+2. functions within functions
+
+
+def add_five(num):
+	def add_two(num):
+		return num +2
+
+	num_plus_two = add_two(num)
+	print(num_plus_two +3)
+
+#add_two(7) would be an error here because add_two is declared in the scope of add_five
+add_five(10)
+
+
+3. returning functions from functions
+
+def get_math_functions(operation):#+ or -
+	#return adds or sutract
+	def add(n1,n2):
+		return n1+n2
+	def sub(n1,n2):
+		return n1-n2
+	if operation == '+'
+		return add
+	else if operation == '-'
+		return sub
+
+
+add_function = get_math_function('+')
+sub_function = get_math_function('-')
+print(add_function(4,6))
+
+4. decorating a function
+def title_dectorator(print_name_function):
+	def wrapper():
+		print("Professor:")
+		print_name_function()
+	return wrapper 
+
+def print_my_name():
+	print("Mike")
+
+decorated_function = title_decorator(print_joes_name)
+
+
+5. decorators
+
+def title_decroator(print_name_function):
+	def wrapper():
+		print("Professor:")
+		print_name_function()
+	return wrapper
+
+@title_dectorator 
+def print_my_name():
+	print("Mike")
+def print_joes_name():
+	print("Joe")
+
+print_my_name()
+
+
+
+6. decorators with parameters 
+
+def title_dectorator(print_name_function):
+	def wrapper(*args,**kwargs):
+		print("Professor:")
+		print_name_function(*args,**kwargs)
+	return wrapper
+
+@title_dectorator 
+def print_my_name(name,age):
+	print(name  "age:" + str(age) )
+
+print_my_name("Shelby",50)
+
+
+
+
+
+
+
+
